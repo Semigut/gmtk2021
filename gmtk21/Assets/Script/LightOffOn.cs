@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class LightOffOn : MonoBehaviour
 {
-   
 
+    public GameObject Licht;
+    public GameObject LichtPlayer;
     // Start is called before the first frame update
     void Start()
     {
+        LichtPlayer.SetActive(false);
         StartCoroutine(LightOff());
     }
 
@@ -21,7 +23,14 @@ public class LightOffOn : MonoBehaviour
     public IEnumerator LightOff()
     {
         yield return new WaitForSecondsRealtime(5f);
-        GetComponent<Light>().enabled = false;
+        //GetComponent<Light>().enabled = false;
+        Licht.SetActive(false);
+        LightOn();
+    }
+
+    public void LightOn()
+    {
+        LichtPlayer.SetActive(true);
 
     }
 }
