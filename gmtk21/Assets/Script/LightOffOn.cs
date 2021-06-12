@@ -7,6 +7,7 @@ public class LightOffOn : MonoBehaviour
 
     public GameObject Licht;
     public GameObject LichtPlayer;
+    public float waitTime;
 
     public Movement movement;
    
@@ -26,7 +27,7 @@ public class LightOffOn : MonoBehaviour
 
     public IEnumerator LightOff()
     {
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(waitTime);
         //GetComponent<Light>().enabled = false;
         Licht.SetActive(false);
         LightOn();
