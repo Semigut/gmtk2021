@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal")*0.08f, 0f, 0f);
+                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal")*1.6f, 0f, 0f);
               
             }
         }
@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
         {
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical")*0.1f, 0f);
+                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical")*1.6f, 0f);
             }
         }
 
@@ -63,5 +63,10 @@ public class Movement : MonoBehaviour
             ani.SetFloat("Vertical", -1);
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 }
