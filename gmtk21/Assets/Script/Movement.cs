@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     public Transform movePoint;
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
         {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal")*0.025f, 0f, 0f);
             }
         }
 
@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         {
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Horizontal")*0.025f, 0f);
             }
         }
 
