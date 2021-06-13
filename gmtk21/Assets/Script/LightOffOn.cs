@@ -14,7 +14,7 @@ public class LightOffOn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LichtPlayer.SetActive(false);
+       // LichtPlayer.SetActive(false);
         StartCoroutine(LightOff());
         
     }
@@ -29,14 +29,14 @@ public class LightOffOn : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(waitTime);
         //GetComponent<Light>().enabled = false;
-        Licht.SetActive(false);
+        //Licht.SetActive(false);
         LightOn();
     }
 
 
     public void LightOn()
     {
-        LichtPlayer.SetActive(true);
+       // LichtPlayer.SetActive(true);
         movement.Run();
        
     }
