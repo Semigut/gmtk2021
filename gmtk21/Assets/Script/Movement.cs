@@ -67,9 +67,17 @@ public class Movement : MonoBehaviour
                 ani.SetFloat("Horizontal", 0);
                 ani.SetFloat("Vertical", -1);
             }
-        }
-        
 
+
+
+
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+
+            SceneManager.LoadScene(0); 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
