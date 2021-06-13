@@ -23,8 +23,8 @@ public class ChangeLayer : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            StartCoroutine(MapOn());
-            Debug.Log("Space");
+           // StartCoroutine(MapOn());
+            
 
         }
     }

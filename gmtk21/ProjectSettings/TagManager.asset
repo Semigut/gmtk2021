@@ -54,6 +54,9 @@ TagManager:
   - name: Insel
     uniqueID: 2925544589
     locked: 0
+  - name: Stern
+    uniqueID: 3869651587
+    locked: 0
   - name: Player
     uniqueID: 1728859203
     locked: 0
