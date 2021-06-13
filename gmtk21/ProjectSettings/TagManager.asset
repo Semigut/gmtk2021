@@ -39,17 +39,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BlackBackground
+    uniqueID: 2308540813
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Background
     uniqueID: 670663357
     locked: 0
-  - name: Insel
-    uniqueID: 2925544589
-    locked: 0
   - name: Frame
     uniqueID: 816213809
+    locked: 0
+  - name: Insel
+    uniqueID: 2925544589
     locked: 0
   - name: Player
     uniqueID: 1728859203
