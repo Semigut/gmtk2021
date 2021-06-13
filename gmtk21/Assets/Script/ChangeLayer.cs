@@ -21,7 +21,12 @@ public class ChangeLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Jump"))
+        {
+            StartCoroutine(MapOn());
+            Debug.Log("Space");
+
+        }
     }
 
    public IEnumerator MapOff()
@@ -31,6 +36,14 @@ public class ChangeLayer : MonoBehaviour
         mapDark.sortingOrder = 10;
         seeDark.sortingOrder = 0;
         seeDark.sortingLayerName = "Default";
+    }
+
+    public IEnumerator MapOn()
+    {
+        mapDark.sortingOrder = 0;
+        yield return new WaitForSecondsRealtime(waitDark);
+        mapDark.sortingOrder = 10;
+
     }
 
 }
