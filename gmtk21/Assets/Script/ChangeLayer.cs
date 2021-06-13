@@ -15,6 +15,7 @@ public class ChangeLayer : MonoBehaviour
     {
 
         seeDark.sortingOrder = 10;
+        seeDark.sortingLayerName = "Player";
         StartCoroutine(MapOff());
     }
 
